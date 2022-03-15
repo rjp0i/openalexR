@@ -81,15 +81,15 @@ test_that("providing email for polite pool gives faster response...", {
   tn <- system.time(
     c1 <- openalex_crawl("works", verbose = TRUE,
              query = openalex:::openalex_query(filter =
-                 "institutions.id:I86987016,publication_year:2022"))
+                 "institutions.id:I51556381,publication_year:2022"))
   )[3]
 
   # polite
-  openalex_polite("markussk@kth.se")
+  openalex_polite("ricky@virginia.edu")
   tp <- system.time(
     c2 <- openalex_crawl("works", verbose = TRUE,
              query = openalex:::openalex_query(filter =
-                 "institutions.id:I86987016,publication_year:2022"))
+                 "institutions.id:I51556381,publication_year:2022"))
   )[3]
 
   message("Polite time: ", tp)
